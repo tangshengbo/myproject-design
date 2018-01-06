@@ -7,6 +7,6 @@ public class FyFileName implements FileName {
 
     @Override
     public String getFileName(String date) {
-        return date + "Fy";
+        return date + "\tFy";
     }
 }
