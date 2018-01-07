@@ -7,6 +7,6 @@ public class FyFileName implements FileName {
 
     @Override
     public String getFileName(String date) {
-        return date + "\tFy";
+        return DEFAULT_SEPARATOR_CHAR + "FY" + JOIN_SIGN + date + TEXT_FILE_SUFFIX;
     }
 }

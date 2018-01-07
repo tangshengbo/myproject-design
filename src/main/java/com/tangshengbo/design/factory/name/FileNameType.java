@@ -8,9 +8,22 @@ public enum FileNameType {
     FY("FY"),
     LL("LL");
 
-    private final String name;
+    private final String code;
 
-    FileNameType(String name){
-        this.name = name;
+    FileNameType(String code) {
+        this.code = code;
+    }
+
+    public String getCode() {
+        return code;
+    }
+
+    public static FileNameType getByCode(String code) {
+        for (FileNameType resultCode : FileNameType.values()) {
+            if (resultCode.getCode().equals(code)) {
+                return resultCode;
+            }
+        }
+        throw new IllegalArgumentException("没有对应的文件类型:" + code);
     }
 }

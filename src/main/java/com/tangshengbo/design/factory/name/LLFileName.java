@@ -7,6 +7,6 @@ public class LLFileName implements FileName {
 
     @Override
     public String getFileName(String date) {
-        return date + "\tLL";
+        return "LL" + JOIN_SIGN + date + CSV_FILE_SUFFIX;
     }
 }

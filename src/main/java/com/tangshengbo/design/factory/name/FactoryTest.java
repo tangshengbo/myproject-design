@@ -9,9 +9,12 @@ import java.util.Date;
 public class FactoryTest {
 
     public static void main(String[] args) {
-        FileName fileName = FileNameFactory.getFileName(FileNameType.LL);
-        SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
-        String name = fileName.getFileName(format.format(new Date()));
+        FileName fileName = FileNameFactory.getFileName(FileNameType.FY.getCode());
+        SimpleDateFormat format = new SimpleDateFormat("yyyyMMdd");
+        String name = null;
+        if (fileName != null) {
+            name = fileName.getFileName(format.format(new Date()));
+        }
         System.out.println(name);
     }
 }

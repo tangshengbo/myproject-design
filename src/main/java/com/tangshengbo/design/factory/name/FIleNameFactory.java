@@ -5,7 +5,8 @@ package com.tangshengbo.design.factory.name;
  */
 public class FileNameFactory {
 
-    public static FileName getFileName(FileNameType type) {
+    public static FileName getFileName(String code) {
+        FileNameType type = FileNameType.getByCode(code);
         switch (type) {
             case LL:
                 return new LLFileName();
