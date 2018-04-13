@@ -3,7 +3,7 @@ package com.tangshengbo.design.decorate.example;
 /**
  * Created by TangShengBo on 2017-09-24.
  */
-public class Test {
+public class DecorateTest {
 
     public static void main(String[] args) {
 //        Component component = new ConcreteComponent();
